@@ -1,0 +1,9 @@
+{% extends 'Fileupload/base.html' %}
+
+{% block content %}
+  {% for i in file %}
+    <img src='{{i.document.url}}' style="width: 10%;height: 10%;">    
+  {% endfor %}
+  <p><a href="{% url 'home' %}">Return to home</a></p>
+{% endblock %}
+
